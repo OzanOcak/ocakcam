@@ -1,0 +1,158 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Welcome to Groundswell </title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    var imagePaths = [
+"images/1.jpg", "images/2.jpg", "images/3.jpg","images/4.jpg", "images/5.jpg", "images/6.jpg",
+"images/11.jpg", "images/12.jpg", "images/13.jpg","images/7.jpg", "images/8.jpg", "images/9.jpg"
+, "images/10.jpg"
+    ];
+var showCanvas = null;
+var showCanvasCtx = null;
+var img = document.createElement("img");
+var currentImage = 0;
+var revealTimer;
+
+window.onload = function () {
+showCanvas = document.getElementById('showCanvas');
+showCanvasCtx = showCanvas.getContext('2d');
+img.setAttribute('width','400');
+img.setAttribute('height','300');
+switchImage();
+
+// start the animation
+setInterval(switchImage,3000);
+}
+function switchImage() {
+img.setAttribute('src',imagePaths[currentImage++]);
+if (currentImage >= imagePaths.length)
+currentImage = 0;
+showCanvasCtx.globalAlpha = 0.1;
+revealTimer = setInterval(revealImage,100);
+}
+
+function revealImage() {
+showCanvasCtx.save();
+showCanvasCtx.drawImage(img,0,0,400,300);
+showCanvasCtx.globalAlpha += 0.1;
+if (showCanvasCtx.globalAlpha >= 1.0)
+clearInterval(revealTimer);
+showCanvasCtx.restore();
+}
+</script>
+</head>
+
+<body>
+<div id="outerDiv">
+
+    <div id="header">
+       
+        <div id="mainMenu">
+            <ul>
+                <li><a href="home.html" class="current">Ana Sayfa</a></li>
+                <li><a href="cam.html">Cam Balkon</a></li>
+                <li><a href="boya.html" >Boya</a></li>
+                <li><a href="boya.html" >Duvar Kagidi</a></li>               
+                <li><a href="bizeulasin.html">Bize Ulasin</a></li>
+            </ul>
+        </div> <!-- mainMenu -->
+    </div> <!-- header -->
+    <div id="midBanner">
+        <img src="images/home_banner.png" width="880" height="100" alt="Ocak Cam" />
+    </div>
+
+    <div id="content">
+        <div id="mainContent">
+
+            <h1>Ocak Ticaret'e hosgeldiniz</h1>
+ 
+            <p>
+            Urunlerimiz:
+            </p>
+            <ul>
+                <li>Cam Balkon</li>
+                <li>Cephe Vitrin Sistemleri</li>
+                <li>Otamatik Kapilar</li>
+                <li>Cam Kapilar</li>
+                <li>Entegre Katlanir Tente</li>
+                <li>Kis Bahcesi</li>
+                <li>Isicam</li>
+                <li>Insaat Boyalari</li>
+                <li>Isolasyon Malzemeleri</li>
+            </ul>
+          
+
+            <h2></h2>
+            
+            <h4>Neden CamBalkon?</h4>
+
+            <p>
+
+Balkon kapama, balkon camlama, balkon cam, cam balkon,camlı balkon kapatma, katlanır cam balkon kaplama  gibi bir çok terim, balkonlarını daha işlevsel olarak kullanmak isteyen sayısız kullanıcı tarafından çok yakından bilinmektedir.
+
+Cambalkon sistemlerinin sağladığı en büyük fayda, balkonları istenildiği zaman kapalı bir mekan haline getirebilmektir. Bu sayede kullanıcılar; kar, yağmur gibi iklim şartları ile gürültü, toz,  haşere, kuşların yuva yapması gibi olumsuz durumlardan korunabilmektedirler. Aynı zamanda, camlar istenilen yerde toplanıp, balkon tamamen açık hale getirilebilmektedir. Dolayısıyla, istenildiği zaman balkon kendi işlevini de yerine getirmektedir.  
+
+Balkon camlama sistemlerinin temel unsuru camdır. Sağladığı şeffaflık sayesinde binanın dış görüntüsüne zarar vermediği gibi estetik bir görüntü de sağlar. Kullanılan camlar, güvenlik ve sağlamlık gerektiren  yapı ürünlerinde kullanılan temperli veya lamine güvenlik camlarıdır. Uygulamanın yapılacağı mekana ve kullanılacak sisteme göre,  8 mm veya 10 mm camlar kullanılır. Ayrıca Albert Genau patenti altında bulunan ısıcamlı sistem ile de  balkonlar kapanabilir.
+
+Balkonların kapanmasında katlanır sistemlerle birlikte “sürme” sistemler de kullanılabilir. Çalışma mantığı, kayar katlanır sistemlerden daha farklıdır. Sistem, tek bir kanadı hareket ettirerek, tüm kanatların bir köşede toplanması esasına dayanır. Kullanımı kolaydır, ancak sistem bir tarafa toplandığında tek kanat genişliği kadar kısım kapalı kalmaktadır. Yay balkonlarda kullanılmaz.
+            </p>
+
+            <h4>Neden AlbertGenau?</h4>
+
+            <p>
+            Sistemin beyni olan, taşıyıcı rulmanlar paslanmazdır.Hırsızlıklara karşı kilitleme mekanizması bulunan tek sistemdir.Aynı zamanda yaşlılar ve çocukların camları açarak tehlikeli hareketleri engellenmektedir.Mükemmel izolasyon Albert Genau 'un işidir.
+Akıllı kapaklarla, panel profillerinin etkin birleşimi sayesinde hava toz v.b. sızdırmaz.Başlangıç ve bitiş dikey profillerinde, çiftli akıllı contaların etkin izolasyonu
+Kanatlarda kapak uçlarına kadar olan dörtlü  fırça sistemi vardir.
+Cam birleşimlerinde solmaz sararmaz, bollaşmaz özel şeffaf fitiller mevcuttur.
+Dayanıklılık ve kolay kullanımi ve Türkiye'de ilk ve tek T.C. Sanayi Bakanlığı onaylı Garanti Belgesi <a href="http://www.albertgenau.com">albertgenau.com</a>
+            </p>
+
+        
+        </div> <!-- mainContent -->
+        
+        <div id="sideBar">
+
+            	<canvas id='showCanvas' width='400' height='300'>
+                Canvas Not Supported
+                </canvas>
+            <h3>cambalkonun adı soyadı</h3>
+            <div id="i1">
+            <img  src="images/albert.jpg" width="200" height="60" alt="albert" />
+            </div>
+           
+            <h3>ve renk pinari ..... </h3>          
+            
+            <img src="images/dyo-logo.jpg" width="200" height="126" alt="dyo" />
+            <h3>Alman kalitesi ile Duvar Kagidi</h3>
+            <p>
+            evinizde yeni bir design'a mi bakiyorsunuz?
+            <a href="gear/boards.htm">Stil</a>
+            
+            </p>
+            <img class="photo" src="images/erismann.png" width="200" height="160" alt="duvar kagidi" />
+            <h3>Photos anyone?</h3>
+            <p>
+            Kalite ve estetigin , Alman teknolojisiyle birlesiminden dogan Erismann duvar kagitlari....
+            <a href="videos.html">You know you want to watch!</a>
+            </p>
+
+        </div> <!-- sideBar -->
+        
+        <p class="clear" />
+    </div> <!-- content -->
+    
+</div> <!-- outerDiv -->
+
+<div id="footer">
+    <p> &copy; ozanocak &nbsp;&nbsp;
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="term.html">Terms and Conditions</a>
+    </p>
+</div>
+
+</body>
+</html>
+
